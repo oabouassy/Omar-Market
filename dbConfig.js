@@ -7,9 +7,9 @@ const client = new Client({
     process.env.NODE_ENV === "production"
       ? process.env.DATABASE_URL
       : connectionString,
-  // ssl: {
-  //   rejectUnauthorized: false,
-  // },
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 client.connect();
 module.exports = { client };
