@@ -18,16 +18,13 @@ const NewProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(
-        "https://omar-market-api.herokuapp.com/api/products",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(formItems),
-        }
-      );
+      const res = await fetch("/api/products", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(formItems),
+      });
       const data = await res.json();
       if (data.message) {
         setInsertedStatus(true);

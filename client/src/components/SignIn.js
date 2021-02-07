@@ -25,14 +25,11 @@ const SignIn = () => {
 
     // send data to the server
     try {
-      const res = await fetch(
-        "https://omar-market-api.herokuapp.com/api/signin",
-        {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify(info),
-        }
-      );
+      const res = await fetch("/api/signin", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(info),
+      });
       const data = await res.json();
       if (data.message) {
         setError(data.message);
@@ -55,9 +52,7 @@ const SignIn = () => {
   };
   const handleSignOut = async () => {
     try {
-      const res = await fetch(
-        "https://omar-market-api.herokuapp.com/api/logout"
-      );
+      const res = await fetch("/api/logout");
       setLoggedUser({});
     } catch (err) {
       console.log(err);

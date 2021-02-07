@@ -7,9 +7,7 @@ const ProductSection = () => {
   const { productlist, setProductList } = useContext(productContext);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(
-        "https://omar-market-api.herokuapp.com/api/products"
-      );
+      const res = await fetch("/api/products");
       const data = await res.json();
       if (data.length > 0) {
         setProductList(data);

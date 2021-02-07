@@ -13,7 +13,7 @@ const SignUp = () => {
   const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // e.target.reset();
+    e.target.reset();
     let errors = [];
     if (!firstname || !lastname || !email || !password || !password2) {
       errors.push("Please enter all fields");
@@ -34,14 +34,11 @@ const SignUp = () => {
         isadmin: false,
       };
       try {
-        const res = await fetch(
-          "https://omar-market-api.herokuapp.com/api/signup",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(userinfo),
-          }
-        );
+        const res = await fetch("/api/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(userinfo),
+        });
         const data = await res.json();
         if (data.err) {
           setRegistered(

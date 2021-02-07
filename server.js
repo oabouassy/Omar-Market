@@ -10,10 +10,6 @@ const path = require("path");
 /* Middlewares */
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? "https://omar-market.netlify.app"
-        : "http://localhost:3001/",
     credentials: true,
   })
 );
@@ -27,7 +23,9 @@ app.use(
     saveUninitialized: false,
   })
 );
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("./client/build"));
+}
 app.get("/", (req, res) => {
   res.json("Welcome to my api");
 });
@@ -162,6 +160,10 @@ app.post("/api/products", async (req, res) => {
 app.get("/test", async (req, res) => {
   const test = await client.query("SELECT NOW()");
   res.json(test.rows[0]);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 /* Server LISTEN */
 app.listen(process.env.PORT || 3001, () => {

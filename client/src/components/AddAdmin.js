@@ -7,12 +7,9 @@ const AddAdmin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        `https://omar-market-api.herokuapp.com/api/user/${email}`,
-        {
-          method: "PUT",
-        }
-      );
+      const response = await fetch(`/api/user/${email}`, {
+        method: "PUT",
+      });
       const user = await response.json();
       if (user.email) {
         setUpdated(true);

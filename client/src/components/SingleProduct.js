@@ -10,9 +10,7 @@ const SingleProduct = ({ match }) => {
   const id = match.params.id;
   useEffect(() => {
     const fetchProduct = async () => {
-      const res = await fetch(
-        `https://omar-market-api.herokuapp.com/api/product/${id}`
-      );
+      const res = await fetch(`/api/product/${id}`);
       const data = await res.json();
       setItem(data);
     };
@@ -20,10 +18,7 @@ const SingleProduct = ({ match }) => {
   }, []);
   const deletePost = async (e) => {
     // delete post
-    const res = await fetch(
-      `https://omar-market-api.herokuapp.com/api/product/${id}`,
-      { method: "DELETE" }
-    );
+    const res = await fetch(`/api/product/${id}`, { method: "DELETE" });
     const data = await res.json();
     if (data.message) {
       history.push("/products");

@@ -22,10 +22,10 @@ function App() {
   const [productlist, setProductList] = useState([]);
   useEffect(() => {
     const fetchUserData = async () => {
-      const res = await fetch(
-        "https://omar-market-api.herokuapp.com/api/signin",
-        { method: "GET", credentials: "include" }
-      );
+      const res = await fetch("/api/signin", {
+        method: "GET",
+        credentials: "include",
+      });
       const data = await res.json();
       if (data.user) {
         setLoggedUser(data.user);
