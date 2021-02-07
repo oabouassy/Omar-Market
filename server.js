@@ -26,9 +26,6 @@ app.use(
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("./client/build"));
 }
-app.get("/", (req, res) => {
-  res.json("Welcome to my api");
-});
 
 app.put("/api/user/:email", async (req, res) => {
   const email = req.params.email;
@@ -156,10 +153,6 @@ app.post("/api/products", async (req, res) => {
   } catch (err) {
     console.error(err.message);
   }
-});
-app.get("/test", async (req, res) => {
-  const test = await client.query("SELECT NOW()");
-  res.json(test.rows[0]);
 });
 
 app.get("*", (req, res) => {
