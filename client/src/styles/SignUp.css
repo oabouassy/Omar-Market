@@ -1,0 +1,90 @@
+.signup_form {
+  width: 100%;
+  margin: 2em auto;
+  max-width: 600px;
+}
+.signup_heading {
+  text-align: center;
+  font-size: 2em;
+  color: rgb(0, 74, 170);
+  margin-bottom: 1em;
+}
+.signup_form input {
+  display: block;
+  width: 100%;
+  margin: auto;
+  background: transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(0, 110, 255);
+  font-size: 1.3em;
+  border-radius: 0.4em;
+}
+.signup_btn {
+  display: block;
+  width: 100%;
+  font-size: 1.3em;
+  margin: auto;
+  padding: 5px;
+  background-color: rgb(0, 110, 255);
+  color: #fff;
+  border: 0;
+  outline: 0;
+  width: 7em;
+  height: 2.5em;
+  cursor: pointer;
+  border-radius: 0.4em;
+}
+.registered {
+  color: green;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+/* .errors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 1.3em;
+  margin-top: 1em;
+  color: #fff;
+}
+.err {
+  display: flex;
+  background-color: brown;
+  padding: 8px;
+  margin: 5px;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+.err .icon,
+.err li {
+  padding: 6px;
+}
+
+@media (min-width: 700px) {
+  .err {
+    width: 50%;
+    max-width: 500px;
+  }
+}
+.registered {
+  background-color: brown;
+  color: rgb(226, 226, 226);
+  padding: 10px;
+  letter-spacing: 1.3px;
+  font-family: "Arial";
+  width: 90%;
+  margin: 1em auto;
+  display: block;
+} */

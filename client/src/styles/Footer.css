@@ -1,0 +1,23 @@
+.footer {
+  background: #1f363d;
+  padding: 10px;
+  color: #cfe0c3;
+  text-align: center;
+  display: flex;
+  font-size: 1.2em;
+}
+.footer_about {
+  text-transform: capitalize;
+}
+.footer a {
+  display: inline-block;
+  padding: 5px;
+  color: #40798c;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.footer a:hover {
+  transition: all 200ms ease-in-out;
+  color: #cfe0c3;
+}

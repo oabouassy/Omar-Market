@@ -1,0 +1,57 @@
+.newproduct_form {
+  width: 100%;
+  margin: 2em auto;
+  max-width: 600px;
+  overflow: hidden;
+}
+.newproduct_heading {
+  text-align: center;
+  font-size: 2em;
+  color: rgb(0, 74, 170);
+  margin-bottom: 1em;
+}
+.newproduct_form input,
+.newproduct_form textarea {
+  display: block;
+  width: 100%;
+  margin: auto;
+  background: transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(0, 110, 255);
+  font-size: 1.3em;
+  border-radius: 0.4em;
+  resize: none;
+}
+.newproduct_form_btn {
+  display: block;
+  width: 100%;
+  font-size: 1.3em;
+  margin: auto;
+  padding: 5px;
+  background-color: rgb(0, 110, 255);
+  color: #fff;
+  border: 0;
+  outline: 0;
+  width: 7em;
+  height: 2.5em;
+  cursor: pointer;
+  border-radius: 0.4em;
+}
+.newproduct_added {
+  color: green;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .newproduct {
+    width: 50%;
+  }
+}

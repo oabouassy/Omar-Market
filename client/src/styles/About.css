@@ -1,0 +1,43 @@
+.about h2,
+.about h3 {
+  text-align: center;
+  margin: 1em auto;
+  font-size: 1.9em;
+  color: #0f4c5c;
+  text-transform: capitalize;
+  background: #c7c7c7;
+  padding: 5px;
+  border-radius: 0.3em;
+}
+.about p {
+  display: block;
+  padding: 10px;
+  font-size: 1.3em;
+}
+.about ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 2em auto;
+}
+.about li {
+  margin: 0.3em auto;
+}
+.about li a {
+  text-decoration: none;
+  background-color: #084887;
+  color: #f58a07;
+  padding: 10px;
+  display: block;
+  width: 200px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  transition: all 200ms ease-in-out;
+}
+.about a:hover {
+  background: #909cc2;
+  color: #f9ab55;
+  border-radius: 0.3em;
+}

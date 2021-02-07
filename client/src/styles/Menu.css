@@ -1,0 +1,46 @@
+.menu {
+  list-style: none;
+  height: 0;
+  font-size: 25px;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu a,
+.menu li {
+  padding: 15px;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+.menu a {
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #000;
+}
+.menu li:hover {
+  background: #70a9a1;
+  color: #000;
+}
+.open {
+  height: 8em;
+  /* margin-top: 0.4em; */
+}
+
+@media (min-width: 790px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+  .open {
+    height: auto;
+    margin: 0;
+  }
+  .menu li {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,25 @@
+.dashboard_signin_btn {
+  text-decoration: none;
+}
+.dashboard_signin_btn button {
+  display: block;
+  font-weight: 900;
+  background-color: transparent;
+  border: 0;
+  color: #001b2e;
+  text-align: center;
+  margin: 2em auto;
+  font-size: 2em;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.dashboard_signin_btn button:hover {
+  color: #00477a;
+}
+@media (min-width: 700px) {
+  .dashboard {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
