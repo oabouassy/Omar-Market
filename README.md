@@ -16,5 +16,7 @@ The app comes with a lot of features :
 6. Express.js
 7. Bcrypt
 8. Express-sesson
-
+## To try admin capapilities:
+  email: testAdmin@gmail.com
+  password: testtest123
 ## Many features will be added soon ... 
